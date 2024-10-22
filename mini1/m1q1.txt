@@ -1,0 +1,9 @@
+Fatin Chowdhury (261178502)
+Q 1.1: 74,111,115,101,0
+Q 1.2: 01001010, 01101111, 01110011, 01100101, 00000000
+Q 1.3: LHLLHLHL, LHHLHHHH, LHHHLLHH, LHHLLHLH, LLLLLLLL
+Q 1.4: CDBB, CBAA, CADA, CBCC, DDDD
+Q 1.5: we saved 2x the original sound bit. At 1.3, 40 sound bits in total. At 1.4, 20 sound bits.
+This is because we condensed the binary couples into 1 letter,
+instead of brute forcing (1 letter for every single digit).
+
