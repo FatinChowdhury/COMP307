@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hometown</title>
+</head>
+<body>
+   <header>
+      <h1 id="header" align="center">My Hometown</h1>
+      <h3 id="header" align="center">Montreal, Canada</h3>
+   </header>
+ 
+ <div id="googleMap" style="width:100%;height:400px;"></div>
+ <script>
+   function myMap() {
+      // Step 1: Create the map
+         var mapProp= {
+         center:new google.maps.LatLng(45.4657, -73.7455),
+         zoom:5,
+         };
+   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+   // Step 2L Add the overlay
+   var marker = new google.maps.Marker({
+   position:new google.maps.LatLng(45.4657, -73.7455),
+   animation:google.maps.Animation.BOUNCE});
+   marker.setMap(map);
+   }
+ </script>
+ <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxfpKLsBqvA3DaFQLii9QpaJdddG1hqps&callback=myMap">
+ </script>
+ <div id="weather">
+   <article>
+      <blockquote>
+         <h2>Weather Forecast Now</h2>
+         <p id="temperature"></p>
+      </blockquote>
+
+   </article>
+</div>
+<script src="index.js"></script>
+<!-- <script
+   src="https://api.open-meteo.com/v1/forecast?latitude=45.4657&longitude=-73.7455&hourly=temperature_2m&timezone=America%2FNew_York">
+</script> -->
+
+
+<footer>
+   <h1>What to do in Montreal</h1>
+      <ul>
+         <li><a href="https://www.mcgill.ca/gradapplicants/gradlife/campus" target="_blank">McGill University</a></li>
+         <li><a href="https://www.saint-joseph.org/en/" target="_blank">Saint Joseph's Oratory of Mount Royal</a></li>
+         <li><a href="https://parcolympique.qc.ca/en/what-to-do/olympic-stadium/" target="_blank">Montreal's Olympic Stadium</a></li>   
+      </ul>
+</footer>
+
+ <style>
+   header {
+      background-color: #44ec0c;
+      padding: 15px;
+      text-align: center;
+      float: center;
+   }
+
+   footer {
+      background-color: #44ec0c;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+   }
+
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+   }
+
+   #googleMap {
+      width: 100%;
+      height: 400px;
+      max-width: 100%;
+      margin: 20px auto;
+   }
+
+   @media screen and (max-width: 768px) {
+      
+      #googleMap {
+         width: 100%;
+         height: 300px;
+      }
+
+      footer {
+         background-color: #44ec0c;
+
+         padding: 10px;
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   @media screen and (max-width: 480px) {
+
+      #googleMap {
+         width: 90%;
+         height: 200px;
+      }
+      
+      footer {
+         padding: 8px;
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   
+ </style>
+
+</body>
+</html>
+
+<!--
+Google Maps API key:
+AIzaSyAxfpKLsBqvA3DaFQLii9QpaJdddG1hqps
+-->
